@@ -56,8 +56,8 @@ services:
       - API_PATH_PREFIX=/api
     env_file:
       - .env
-    working_dir: /zeppelin/backend
-    command: ["npm", "run", "migrate-prod"]
+    working_dir: /alice/backend
+    command: ["pnpm", "run", "migrate-prod"]
 
   api:
     image: zeppelin-local
@@ -68,8 +68,8 @@ services:
     environment: *env
     env_file:
       - .env
-    working_dir: /zeppelin/backend
-    command: ["npm", "run", "start-api-prod"]
+    working_dir: /alice/backend
+    command: ["pnpm", "run", "start-api-prod"]
 
   bot:
     image: zeppelin-local
@@ -80,8 +80,8 @@ services:
     environment: *env
     env_file:
       - .env
-    working_dir: /zeppelin/backend
-    command: ["npm", "run", "start-bot-prod"]
+    working_dir: /alice/backend
+    command: ["pnpm", "run", "start-bot-prod"]
   
   dashboard:
     image: zeppelin-local
@@ -92,5 +92,5 @@ services:
     environment: *env
     env_file:
       - .env
-    working_dir: /zeppelin/dashboard
+    working_dir: /alice/dashboard
     command: ["node", "serve.js"]
