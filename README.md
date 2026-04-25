@@ -1,6 +1,12 @@
 ![Alice Banner](assets/ALICEbanner.png)
 # Alice
-former Zeppelin
+Forked from Zeppelin
+
+### Original Copyright
+
+Copyright (c) Zeppelin Contributors
+
+This project includes software developed as part of the Zeppelin project.
 
 ## Disclaimer & Attribution
 **ALICE** is a modified version of the original **Zeppelin** moderation bot.
@@ -164,11 +170,14 @@ https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scop
 ## Usage Documentation
 
 For information on how to use the bot, see [docs/MANAGEMENT.md](docs/MANAGEMENT.md).
+For the original project, see: https://zeppelin.gg/
 
 ## Development
 
 See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for instructions on running the development environment.
+For the original project, see: https://zeppelin.gg/
 
 ## Production
 
 See [docs/PRODUCTION.md](docs/PRODUCTION.md) for instructions on how to run the bot in production.
+For the original project, see: https://zeppelin.gg/
