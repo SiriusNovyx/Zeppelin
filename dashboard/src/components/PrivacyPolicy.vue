@@ -1,92 +1,141 @@
 <template>
-  <div class="privacy-policy">
-    <div class="wrapper">
-      <h1>Zeppelin Privacy Policy</h1>
+  <div class="pp-root">
+    <Title title="Alice — Privacy Policy" />
 
-      <h2>Zeppelin overview</h2>
-      <p>
-        Zeppelin is a moderation bot for Discord that allows server staff to
-        carry out moderator actions (warn, mute, kick, ban, clean messages, view
-        user information, etc.),
-        keep records of infractions, perform automated actions ("automod", e.g.
-        message filtering), post detailed logs on logging channels, and set up
-        systems such as reaction roles.
-        The bot also includes a web dashboard that server administrators can log
-        in to through Discord OAuth.
-      </p>
-      <p>
-        The bot's source code is available at
-        <a href="https://github.com/ZeppelinBot/Zeppelin">
-          https://github.com/ZeppelinBot/Zeppelin
-        </a>
-      </p>
+    <div class="pp-bg-grid" aria-hidden="true"></div>
 
-      <h2>Stored data</h2>
-      <p>
-        When Zeppelin is used by a server, the following categories data can be
-        stored by the bot.
-        The specific categories of data saved for each server depends on how the
-        server has configured Zeppelin.
-      </p>
-      <ul>
-        <li>Recent messages and username/nickname changes of users engaged on
-          the server
-        </li>
-        <li>Recent bulk deleted messages</li>
-        <li>Basic user information, moderator-entered text, and relevant message
-          archives for infraction records
-        </li>
-        <li>A subset of previously held roles and nickname on the server to be
-          restored when a user rejoins
-        </li>
-        <li>Basic server details of the server using the bot</li>
-      </ul>
-      <p>
-        Additionally, when a user logs in to the web dashboard the following
-        types of data are stored:
-      </p>
-      <ul>
-        <li>Basic Discord user information</li>
-        <li>Time and originating IP address of the login for security audit
-          purposes
-        </li>
-      </ul>
+    <div class="pp-inner">
+      <router-link class="pp-back" to="/">← Back to Home</router-link>
 
-      <h2>Data retention</h2>
-      <ul>
-        <li>
-          Recent messages are stored for 24h
-          <ul>
-            <li>Deleted messages within this 24h are cleared 5 minutes after
-              deletion
-            </li>
-          </ul>
-        </li>
-        <li>5 most recent usernames and 10 most recent nicknames of users
-          engaged in chat or voice channels are stored for 30 days
-        </li>
-        <li>Archives of bulk-deleted messages are stored for 30 days</li>
-        <li>Infraction record data is kept until the server stops using Zeppelin
-          unless explicitly deleted
-        </li>
-        <li>Roles and nicknames that are restored on rejoin are cleared when the
-          user rejoins
-        </li>
-        <li>User information for users logged in to the bot's web dashboard via
-          Discord OAuth is stored as long as the server uses Zeppelin
-        </li>
-      </ul>
+      <header class="pp-header">
+        <div class="pp-header-badge">Legal</div>
+        <h1 class="pp-title">Privacy Policy</h1>
+        <p class="pp-date">Last updated: April 2026 · Alice Moderation Bot</p>
+      </header>
 
-      <h2>Data access and deletion requests</h2>
-      <p>
-        To request access to personal data stored about you, or to request its
-        deletion, to the extent permitted by GDPR, please send an email to <a
-        href="mailto:contact@mivir.fi">contact@mivir.fi</a>.
-      </p>
-    </div></div>
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">📋</span> Overview</h2>
+        <p class="pp-text">
+          Alice is a Discord moderation bot that helps server staff manage communities
+          through moderation tools, logging, and automation. This policy explains what
+          data we collect, why we collect it, and how it is handled.
+        </p>
+        <div class="pp-callout">
+          Alice only collects data necessary for its core moderation features.
+          We do not sell or share your data with third parties.
+        </div>
+      </div>
+
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">💾</span> Data We Store</h2>
+        <p class="pp-text">When Alice is active in a server, the following categories of data may be stored. The exact categories depend on how the server has configured the bot.</p>
+        <ul class="pp-list">
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Recent messages (used for automod and moderation features)</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Usernames, display names, and nickname history</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Role assignments and permission levels</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Moderation logs, cases, notes, and action history</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Server configuration data set by administrators</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Archived bulk-deleted messages (when log plugin is enabled)</li>
+        </ul>
+      </div>
+
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">🌐</span> Dashboard Data</h2>
+        <p class="pp-text">When you log into the Alice dashboard via Discord OAuth2, the following data is stored:</p>
+        <ul class="pp-list">
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Basic Discord profile information (username, user ID, avatar)</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Login timestamp for session management</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>IP address of the login (used for security audit purposes only)</li>
+        </ul>
+      </div>
+
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">⏱️</span> Data Retention</h2>
+        <div class="pp-table-wrap">
+          <table class="pp-table">
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Retention Period</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Recent messages</td>
+                <td><span class="pp-badge pp-badge--green">24 hours</span></td>
+                <td>Automod, bulk deletion</td>
+              </tr>
+              <tr>
+                <td>Deleted messages</td>
+                <td><span class="pp-badge pp-badge--green">5 min after deletion</span></td>
+                <td>Brief audit window</td>
+              </tr>
+              <tr>
+                <td>Username / nickname history</td>
+                <td><span class="pp-badge pp-badge--blue">30 days</span></td>
+                <td>Name history tracking</td>
+              </tr>
+              <tr>
+                <td>Message archives</td>
+                <td><span class="pp-badge pp-badge--blue">30 days</span></td>
+                <td>Bulk delete logs</td>
+              </tr>
+              <tr>
+                <td>Moderation cases</td>
+                <td><span class="pp-badge pp-badge--purple">Until removed</span></td>
+                <td>Infraction records</td>
+              </tr>
+              <tr>
+                <td>Server configuration</td>
+                <td><span class="pp-badge pp-badge--purple">Until removed</span></td>
+                <td>Bot operation</td>
+              </tr>
+              <tr>
+                <td>Dashboard sessions</td>
+                <td><span class="pp-badge pp-badge--blue">7 days</span></td>
+                <td>Authentication</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">👤</span> Your Rights</h2>
+        <p class="pp-text">You have the right to:</p>
+        <ul class="pp-list">
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Request access to personal data stored about you</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Request deletion of your personal data</li>
+          <li><span class="pp-list-arrow" aria-hidden="true">▸</span>Ask questions about how your data is used</li>
+        </ul>
+        <div class="pp-callout">
+          To exercise these rights, contact us via our
+          <a href="https://discord.gg/T4BCYpB7yu" target="_blank" rel="noopener noreferrer">Discord server</a>
+          or open an issue on
+          <a href="https://github.com/SiriusNovyx/Alice" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </div>
+      </div>
+
+      <div class="pp-card">
+        <h2 class="pp-card-title"><span class="pp-card-icon" aria-hidden="true">🔒</span> Security</h2>
+        <p class="pp-text">
+          Alice is self-hosted and all data is stored on servers controlled by the instance owner.
+          All dashboard communication is encrypted via HTTPS/TLS.
+          Discord OAuth2 is used for authentication — we never see or store your Discord password.
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script type="ts">
-  import "../style/privacy-policy.css";
-  export default {};
+<script lang="ts">
+import Title from "./Title.vue";
+export default {
+  components: { Title },
+};
 </script>
+
+<style>
+@import "../style/privacy-policy.css";
+</style>
