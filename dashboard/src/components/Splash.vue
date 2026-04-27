@@ -21,7 +21,7 @@
         <img
           v-if="hasCharacterImage"
           class="splash-char"
-          src="/img/alice-character.png"
+          :src="charUrl"
           alt="Alice"
         />
         <div v-else class="splash-char-fallback">
